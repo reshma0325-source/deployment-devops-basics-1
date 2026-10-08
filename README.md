@@ -107,3 +107,7 @@ my-api-app/
 ## Why .env is gitignored
 
 `.env` holds machine-specific configuration such as the port and the runtime environment, and in real projects it also holds secrets like API keys and database passwords. Committing it would leak those values to everyone with repository access and make local settings bleed into other machines. `.env.example` is committed instead: it documents every required key with safe placeholder values so a teammate can copy it to `.env` and run the app immediately.
+
+## Changelog
+
+- Initial release of the `my-api-app` products API with health check, validation and JSON error handling.
