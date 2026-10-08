@@ -6,6 +6,7 @@ A zero-dependency Node.js HTTP JSON API that manages an in-memory product catalo
 
 | Method | Path                | Description                          | Success | Error  |
 | ------ | ------------------- | ------------------------------------ | ------- | ------ |
+| GET    | `/`                 | API index with the endpoint list     | 200     | -      |
 | GET    | `/health`           | Health check with uptime and timestamp | 200   | -      |
 | GET    | `/api/products`     | List all products                    | 200     | -      |
 | GET    | `/api/products/:id` | Get a single product by its id       | 200     | 404    |

@@ -62,6 +62,19 @@ async function handleRequest(req, res) {
     });
   }
 
+  if (method === "GET" && url.pathname === "/") {
+    return sendJson(res, 200, {
+      name: "my-api-app",
+      status: "ok",
+      endpoints: {
+        health: "GET /health",
+        listProducts: "GET /api/products",
+        getProduct: "GET /api/products/:id",
+        createProduct: "POST /api/products",
+      },
+    });
+  }
+
   if (segments[0] === "api" && segments[1] === "products") {
     if (segments.length === 2 && method === "GET") {
       return sendJson(res, 200, { status: "success", data: products.list() });
@@ -108,7 +121,7 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(port, host, () => {
-  console.log("my-api-app listening on http://" + host + ":" + port);
+  console.log("my-api-app listening on http://localhost:" + port + " (bound to " + host + ")");
 });
 
 function shutdown(signal) {
