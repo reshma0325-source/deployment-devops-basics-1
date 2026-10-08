@@ -1,0 +1,26 @@
+Case Study 1: Git & GitHub Integration with Node.js Project
+
+🎯 Objective:
+Push a full Node.js app to GitHub using best practices.
+
+📁 Project Setup:
+📁 my-api-app
+├── 📄 app.js
+├── 📄 package.json
+├── 📁 routes/
+├── 📄 .env
+├── 📄 .gitignore
+🔧 Git & GitHub Steps:
+git init
+echo "node_modules\n.env\nlogs/" > .gitignore
+git add .
+git commit -m "🚀 Initial commit"
+git remote add origin https://github.com/username/my-api-app.git
+git push -u origin main
+🧪 Practice:
+Clone repo on another system
+
+Modify README.md, push again
+
+Add branch: git checkout -b dev
+
